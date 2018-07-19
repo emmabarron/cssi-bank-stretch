@@ -1,0 +1,56 @@
+body {
+  background-color: #333;
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+}
+
+.bank-header {
+  padding: 15px 30px;
+}
+
+.bank-header h1 {
+  color: white;
+  font-weight: normal;
+  margin: 0;
+}
+
+.vault-outer {
+  position: relative;
+}
+
+.login-message,
+.login-form {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  left: 30px;
+  padding: 6px 15px;
+  position: absolute;
+  top: 30px;
+}
+
+.login-message {
+  padding: 6px 15px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.login-form *:not(:first-child) {
+  margin-top: 10px;
+}
+
+.login-form input {
+  box-sizing: border-box;
+  width: 150px;
+}
+
+.login-form input:first-child {
+  margin-top: 0;
+}
+
+.login-form a {
+  font-size: smaller;
+}

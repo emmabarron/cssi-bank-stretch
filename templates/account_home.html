@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSSI Bank</title>
+  <link rel="stylesheet" href="../styles/account_home.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+</head>
+<body>
+  <div class="bank-header">
+    <h1>CSSI First Bank</h1>
+  </div>
+  <div class="welcome-header">
+    <h2>{{home_message}}</h2>
+    <a href="{{logout_url}}">Sign out</a>
+  </div>
+  <div class="account-actions">
+    <button id="deposit-button">Deposit</button>
+    <button id="withdraw-button">Withdraw</button>
+    <button id="transfer-button">Transfer</button>
+  </div>
+  <div class="transaction-data-error">
+    {{transaction_error}}
+  </div>
+  <h2 class="balance">Balance: {{balance}}</h2>
+  <div class="transactions-container">
+    <h3>Transaction history:</h3>
+    <div class="transactions-list">
+      <div class="transaction">
+        <label>Date and time</label>
+        <label>Amount</label>
+        <label>Transfer details</label>
+      </div>
+      {{transactions_html}}
+    </div>
+  </div>
+
+  <div id="deposit-popup" class="transaction-form-container">
+    <form method="post" class="transaction-form" action="/?type=deposit">
+      <input type="text" name="deposit_amount" placeholder="Amount" value="{{deposit_amount}}">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div id="withdraw-popup" class="transaction-form-container">
+    <form method="post" class="transaction-form" action="/?type=withdraw">
+      <input type="text" name="withdraw_amount" placeholder="Amount" value="{{withdraw_amount}}">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div id="transfer-popup" class="transaction-form-container">
+    <form method="post" class="transaction-form" action="/?type=transfer">
+      <input type="text" name="transfer_amount" placeholder="Amount" value="{{transfer_amount}}">
+      <input type="text" name="recipient" placeholder="Recipient email" value="{{transfer_recipient}}">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <script src="../scripts/account_home.js"></script>
+</body>

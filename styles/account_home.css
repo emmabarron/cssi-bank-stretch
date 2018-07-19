@@ -1,0 +1,137 @@
+body {
+  background-color: #333;
+  font-family: 'Roboto Slab', serif;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.bank-header {
+  padding: 15px 30px;
+}
+
+.bank-header h1 {
+  color: white;
+  font-weight: normal;
+  margin: 0;
+}
+
+.welcome-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+h2 {
+  color: lightgrey;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2.balance {
+  padding: 10px 30px;
+}
+
+.welcome-header a {
+  font-size: smaller;
+  color: white;
+}
+
+.welcome-header a:visited {
+  color: #bdf;
+}
+
+.account-actions {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.account-actions button {
+  border-radius: 5px;
+  padding: 6px 15px;
+  font-weight: 500;
+}
+
+.account-actions button:hover,
+.account-actions button:active {
+  background-color: #ddd;
+}
+
+.account-actions button:hover:active {
+  background-color: #bbb;
+}
+
+.transaction-data-error {
+  color: #b77;
+  text-align: center;
+}
+
+.transactions-container {
+  padding: 15px 30px;
+}
+
+.transactions-container h3 {
+  color: lightgrey;
+  margin: 0;
+}
+
+.transactions-container h3 {
+  color: lightgrey;
+  font-weight: 400;
+  margin: 0;
+}
+
+.transaction {
+    color: white;
+    display: flex;
+    font-weight: 100;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.transaction > *:not(:last-child) {
+    width: 120px;
+}
+
+.transaction > *:not(:first-child) {
+    text-align: end;
+}
+
+.transaction > :last-child {
+    flex-grow: 1;
+}
+
+.transaction-form-container {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px rgba(255, 255, 255, .5);
+  visibility: hidden;
+  opacity: 0;
+  padding:15px;
+  position: absolute;
+  transform: translateY(-30px);
+  transition: opacity 0.3s linear,
+      transform 0.3s linear,
+      visibility 0s linear 0.3s;
+}
+
+.transaction-form-container.showing {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition: opacity 0.3s linear,
+      transform 0.3s linear,
+      visibility 0s linear 0s;
+}
+
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-form > *:not(:first-child) {
+  margin-top: 6px;
+}
