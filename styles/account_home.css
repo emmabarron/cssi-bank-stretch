@@ -84,11 +84,11 @@ h2.balance {
 }
 
 .transaction {
-    color: white;
-    display: flex;
-    font-weight: 100;
-    align-items: center;
-    margin-top: 15px;
+  color: white;
+  display: flex;
+  font-weight: 100;
+  align-items: center;
+  margin-top: 15px;
 }
 
 .transaction > *:not(:last-child) {

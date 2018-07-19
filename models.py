@@ -1,4 +1,3 @@
-from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.ndb import msgprop
 from protorpc import messages

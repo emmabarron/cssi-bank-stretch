@@ -1,5 +1,3 @@
-console.log('scripting');
-
 const transactionTypes = ['deposit', 'withdraw', 'transfer'];
 
 const transactionButtons = {};
