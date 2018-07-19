@@ -196,7 +196,7 @@ class MainHandler(webapp2.RequestHandler):
             return
 
         new_user = User(
-            email = user.email(),
+            email = user.email().lower(),
             first_name = self.request.get('first_name'),
             last_name = self.request.get('last_name'),
             id = user.user_id()
@@ -252,7 +252,7 @@ class MainHandler(webapp2.RequestHandler):
             return
 
         recipient_email = self.request.get("recipient")
-        recipient_users_found = User.query(User.email.lower() == recipient_email.lower()).fetch()
+        recipient_users_found = User.query(User.email == recipient_email).fetch()
         if len(recipient_users_found) == 0:
             send_account_page(self, existing_user, error_message = "Recipient has no bank account")
             return
